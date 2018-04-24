@@ -1,14 +1,24 @@
 {
   "parser": "babel-eslint",
   "extends": [
-    "standard",
-    "standard-react"
+    "airbnb",
+    "plugin:flowtype/recommended",
+    "prettier",
+    "prettier/flowtype",
+    "prettier/react"
   ],
   "env": {
-    "es6": true
+    "browser": true,
+    "es6": true,
+    "node": true,
+    "jest": true
   },
   "plugins": [
-    "react"
+    "react",
+    "immutable",
+    "import",
+    "flowtype",
+    "prettier"
   ],
   "parserOptions": {
     "sourceType": "module",
@@ -22,6 +32,11 @@
     "react/jsx-boolean-value": 0,
 
     // allow imports mixed with non-import statements at top of file
-    "import/first": 0
+    "import/first": 0,
+
+    // dont care js or jsx
+    "react/jsx-filename-extension": 0,
+
+    "prettier/prettier": "error",
   }
 }
